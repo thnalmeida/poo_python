@@ -9,6 +9,8 @@ class EmpDomestica(ABC):
         self.__telefone = telefone
         self.almoco = almoco
 
+
+    #para colocar um metodo privado
     @property
     def nome(self):
         return self.__nome
@@ -31,7 +33,8 @@ class EmpDomestica(ABC):
     #Nesse caso, cada modalidade de empregada domestica tem uma forma de calcular o salario. ou seja, 
     #cada uma vai implementar o método (salario) à sua maneira dentro da classe. herdando o método da classe mae.
 
-#Definindo subclasse Horista
+#Definindo subclasse Horista (superclasse: EmpDomestica) 
+#Adiciono atributos que ela vai ter e q nao tem na super classe
 class Horista(EmpDomestica): 
     def __init__(self, nome: str, telefone: int, almoco: bool, horasTrabalhadas: float, valorPorHora: float):
         super().__init__(nome, telefone, almoco)
