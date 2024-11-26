@@ -1,7 +1,7 @@
 #TRABALHO 04 - POO 2024/2
 
 #trabalho com classe e metodos abstratos. isto eh, a classe terreno nao pode ser instanciada diretamente, pois qlq terreno
-#tem seu proprio formato e, por isso, cada um tem o calculo de area e de peso à sua maneira (classe abstrata)
+#tem seu proprio formato e, por isso, cada um tem o calculo de area e de peso à sua maneira (metodo abstrato)
 from abc import ABC, abstractmethod
 
 #criando superclasse terreno
@@ -28,14 +28,14 @@ class Terreno:
     
     @preco.setter
     def preco(self, preco):
-        self._preco = preco
+        self.__preco = preco
         
     @abstractmethod
     def calcula_area(self) -> float:
         pass
+    
     #criando metodo abstrato calcula_peso, pois cada tipo de terreno vai ter o seu comportamento nesse calculo (a depender do formato do terreno)
     @abstractmethod
-    
     def calcula_peso(self) -> float:
         pass
 
