@@ -11,13 +11,22 @@ class EmpDomestica(ABC):
 
 
     #para colocar um metodo privado
+    #property transforma o metodo em propriedade. nao preciso chamar terreno.get_idade()
     @property
     def nome(self):
         return self.__nome
-
+    
+    @nome.setter
+    def nome(self, nome):
+        self._nome = nome
+        
     @property
     def telefone(self) -> int:
         return self.__telefone
+    
+    @telefone.setter
+    def telefone(self, telefone):
+        self.__telefone = telefone
     
     @abstractmethod
     def getSalario(self):
