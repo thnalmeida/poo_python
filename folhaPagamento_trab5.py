@@ -1,6 +1,6 @@
 #TRABALHO 05 - FOLHA DE PAGAMENTO
 
-#importando bliblioteca abc
+#importando bliblioteca abc pois teremos classe e metodos abstratos
 from abc import ABC, abstractmethod
 
 #criando classe abstrata Funcionario (nao pode ser instanciada diretamente) 
@@ -66,7 +66,7 @@ class Professor(Funcionario):
         self.ano = ano
         print("Codigo: ", self.codigo)
         print("Nome: ", self.nome)
-        print(f"Salario líquido: {self.calculaSalario(): .2f}")
+        print(f"Salario líquido: {self.calculaSalario(): .2f}") #dessa forma o resultado ter aapenas duas casas decimais
         print(f"Bônus: {self.calculaBonus(): .2f}")
      
 #criando instancia tecnico admnistrativo
